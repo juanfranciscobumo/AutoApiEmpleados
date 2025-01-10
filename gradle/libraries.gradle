@@ -1,11 +1,11 @@
 ext {
-    logbackjVersion = '1.4.14'
-    serenityCoreVersion = '4.2.11'
-    junitVersion = '5.11.4'
-    assertJVersion = '3.27.2'
     jacksonVersion = '2.18.2'
-    cucumberVersion = '7.20.1'
-    junitPlatform = '1.11.4'
+    logbackjVersion = '1.4.14'
+    serenityCoreVersion = '4.0.46'
+    junitPlatform = '1.10.1'
+    junitVersion = '5.10.1'
+    assertJVersion = '3.25.2'
+    cucumberVersion = '7.15.0'
     libs = [
             logback: "ch.qos.logback:logback-classic:${logbackjVersion}",
             test   : [

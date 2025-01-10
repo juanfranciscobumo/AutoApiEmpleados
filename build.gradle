@@ -12,7 +12,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:4.2.11")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:4.0.46")
     }
 }
 apply plugin: 'java-library'  // Solo este plugin si es una biblioteca Java
@@ -35,17 +35,12 @@ dependencies {
     implementation libs.logback
     implementation libs.test.jacksonDatatype
     implementation libs.test.jacksonDataformat
-
-    implementation 'net.java.dev.jna:jna:5.10.0' // O la versión más reciente disponible
-
 }
 
 test {
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
-    useJUnitPlatform()  // Asegura que se usen las pruebas de JUnit 5
-    // Si deseas que las pruebas se ejecuten en paralelo, elimina maxParallelForks
-    // maxParallelForks = 1  // Elimina esta línea si no necesitas ejecución secuencial
+    useJUnitPlatform()
 }
 
 gradle.startParameter.continueOnFailure = false  // Se recomienda false para obtener un reporte claro de fallos
